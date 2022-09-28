@@ -22,7 +22,7 @@ jobs:
           RELEASE_BRANCH="release-${MAJOR_MINOR_VERSION}"
           echo ::set-output name=RELEASE_BRANCH::${RELEASE_BRANCH}
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
         with:
           ref: ${{ steps.get_branch.outputs.RELEASE_BRANCH }}
       - name: Test Choco Upgrade
@@ -51,7 +51,7 @@ jobs:
           git config --global pull.rebase true
           git config --global url."https://git:${GITHUB_TOKEN}@github.com".insteadOf "https://github.com"
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Commit Choco Metadata
         env:
           GITHUB_TOKEN: ${{ secrets.GH_RELEASE_ACCESS_TOKEN }}
@@ -80,7 +80,7 @@ jobs:
           RELEASE_BRANCH="release-${MAJOR_MINOR_VERSION}"
           echo ::set-output name=RELEASE_BRANCH::${RELEASE_BRANCH}
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
         with:
           ref: ${{ steps.get_branch.outputs.RELEASE_BRANCH }}
       - name: Push to Chocolatey
