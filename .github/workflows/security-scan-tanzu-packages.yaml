@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
       - name: Identify all images
         run: |
           mkdir local-bin/
@@ -46,7 +46,7 @@ jobs:
         chunks: [ "00", "01", "02", "03", "04", "05", "06", "07", "08", "09" ]
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
       - uses: actions/download-artifact@v3
         with:
           name: images-list

@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3.1.0
       - name: Test Homebrew Upgrade
         env:
           TCE_CI_BUILD: true
@@ -34,7 +34,7 @@ jobs:
           git config --global pull.rebase true
           git config --global url."https://git:${GITHUB_TOKEN}@github.com".insteadOf "https://github.com"
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3.1.0
       - name: Update Homebrew Package
         env:
           GITHUB_TOKEN: ${{ secrets.GH_RELEASE_ACCESS_TOKEN }}
