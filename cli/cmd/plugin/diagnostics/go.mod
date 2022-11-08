@@ -8,7 +8,7 @@ replace github.com/vmware-tanzu/community-edition => ../../../../
 
 require (
 	github.com/spf13/cobra v1.5.0
-	github.com/vladimirvivien/gexe v0.1.1
+	github.com/vladimirvivien/gexe v0.2.0
 	github.com/vmware-tanzu/community-edition v0.9.1
 	github.com/vmware-tanzu/crash-diagnostics v0.3.7
 	github.com/vmware-tanzu/tanzu-framework v0.11.4
